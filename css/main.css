@@ -1,0 +1,361 @@
+.div_border {
+    border: 2px solid rgb(177, 4, 4);
+}
+.top_bar {
+    padding-top:15px ;
+    padding-bottom: 10px;
+    /* padding: 10px; */
+}
+/* ===============LOGO Section============ */
+.logo {
+    width: 50px;
+    height: 50px;
+}
+.logo_h1 {
+    color: #fe0000;
+    font-family: 'Noto Serif', serif;
+    font-size: 22px;
+}
+
+.logo_h2 {
+    color: #000;
+    font-family: 'Noto Serif', serif;
+    font-size: 22px;
+}
+.logo_h3{
+    color: #000;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* ===============LOGO Section END============ */
+/* ===============Top Contact Section============ */
+.icon-blue {
+    color: #202c45; /* Bootstrap primary blue */
+    font-size: 1.75rem;
+
+}
+.contact-text{
+    text-align: center;
+    line-height: 1.2; 
+}
+.contact-label {
+    font-size: 12px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #202c45;
+    
+}
+.contact-number {
+    font-size: 17px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+}
+.contact-email {
+    font-size: 14px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+}
+.contact-location{
+    font-size: 14px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+}
+/* .custom-border {
+    border-right: 1.5px solid #0d6efd;
+} */
+/* ===============Top Bar Section END============ */
+
+
+/* Banner */
+.hero-banner {
+    position: relative;
+    background: #f4f6f8 url("../images/banner_BG.jpg") no-repeat center/cover;
+    padding-bottom: 80px;
+}
+
+
+
+
+/* Banner content spacing */
+.banner-content {
+    padding-top: 140px; /* pushes content below menu */
+}
+
+/* Banner title */
+.banner-title {
+    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+}
+
+.banner-title span {
+    color: #ff2b55;
+}
+
+/* Read more */
+.btn-read {
+    display: inline-block;
+    margin-top: 20px;
+    background: #1f2a44;
+    color: #fff;
+    padding: 10px 22px;
+    text-decoration: none;
+}
+
+/* Banner image */
+.banner-img {
+    max-width: 100%;
+    border: 8px solid #fff;
+}
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+/* =================Laptops (≥992px)====================== */
+/* ===============LOGO Section============ */
+.logo {
+    width: 40px;
+    height: 40px;
+}
+.logo_h1 {
+    color: #fe0000;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+}
+
+.logo_h2 {
+    color: #000;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+}
+.logo_h3{
+    color: #000;
+    font-family: 'Noto Serif', serif;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* ===============LOGO Section END============ */
+/* ===============Top Contact Section============ */
+.icon-blue {
+    color: #202c45; /* Bootstrap primary blue */
+    font-size: 1.5rem;
+}
+.contact-text{
+    text-align: center;
+    line-height: 1.0; 
+}
+.contact-label {
+    font-size: 12px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #202c45;
+    
+}
+.contact-number {
+    font-size: 13px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+}
+.contact-email {
+    font-size: 10px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+    overflow-wrap: anywhere;
+}
+.contact-location{
+    font-size: 12px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+}
+
+/* .custom-border {
+    border-right: 1.5px solid #0d6efd;
+} */
+/* ===============Top Contact Section END============ */
+}
+
+
+/* ================Laptops (≥992px) ENDS======================= */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////// */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+/* ===================TABLET (≥768px)======================== */
+/* ===============LOGO Section============ */
+.logo {
+    width: 50px;
+    height: 50px;
+}
+.logo_h1 {
+    color: #fe0000;
+    font-family: 'Noto Serif', serif;
+    font-size: 20px;
+}
+
+.logo_h2 {
+    color: #000;
+    font-family: 'Noto Serif', serif;
+    font-size: 20px;
+}
+.logo_h3{
+    color: #000;
+    font-family: 'Noto Serif', serif;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* ===============LOGO Section END============ */
+/* ===============Top Contact Section============ */
+.icon-blue {
+    margin-top: 7px;
+    color: #202c45; /* Bootstrap primary blue */
+    font-size: 1.0rem;
+}
+.contact-text{
+    margin-top: 5px;
+    text-align: center;
+    line-height: .8 ; 
+}
+.contact-label {
+    font-size: 10px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #202c45;
+    
+}
+.contact-number {
+    font-size: 9px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+}
+.contact-email {
+    font-size: 10px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+    overflow-wrap: anywhere;
+}
+.contact-location{
+    font-size: 10px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+}
+
+
+}
+/* ====================TABLET (≥768px) END============================================== */
+/* ================================================================================================== */
+
+
+/* @media (min-width: 576px) and (max-width: 767.98px) */
+@media (min-width: 300px) and (max-width: 767.98px)
+ {
+/* ==================================================================
+Large Phones
+================================================================== */
+/* ===============LOGO Section============ */
+.logo {
+    width: 40px;
+    height: 40px;
+}
+.logo_h1 {
+    color: #fe0000;
+    font-family: 'Noto Serif', serif;
+    font-size: 15px;
+}
+
+.logo_h2 {
+    color: #000;
+    font-family: 'Noto Serif', serif;
+    font-size: 15px;
+}
+.logo_h3{
+    color: #000;
+    font-family: 'Noto Serif', serif;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* ===============LOGO Section END============ */
+/* ===============Top Contact Section============ */
+.icon-blue {
+    margin-top: 7px;
+    color: #202c45; /* Bootstrap primary blue */
+    font-size: 1.0rem;
+}
+.contact-text{
+    margin-top: 5px;
+    text-align: center;
+    line-height: .8 ; 
+}
+.contact-label {
+    font-size: 10px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #202c45;
+    
+}
+.contact-number {
+    font-size: 9px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+}
+.contact-email {
+    font-size: 10px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+    overflow-wrap: anywhere;
+}
+.contact-location{
+    font-size: 10px;
+    font-family: 'Noto Serif', serif;
+    font-weight: 500;
+    margin-top: 0px;
+    color: #202c45;
+    overflow-wrap: anywhere;
+}
+
+
+}
+
+
+/* =======================Large Phone END=============================
+
+
+
+
+
