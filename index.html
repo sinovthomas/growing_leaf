@@ -14,9 +14,17 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Banner 4 line font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad+Guides&display=swap" rel="stylesheet">
+
+
 
 </head>
 <body>
+<!-- -----------Section-1------------ -->
+<section> 
     <div class="container">
         <div class="top_bar">
             <div class="row ">
@@ -68,11 +76,13 @@
             </div>
         </div>
     </div>
-    
+</section>
+<!-- -----------Section-1------------ -->
+
+<!-- -----------Section-2------------ -->
 <!-- Banner Section -->
 <section class="hero-banner ">
     <!-- Menu Bar -->
-
      <div class="menu container">
         <div class="col-12">
             <nav>
@@ -85,78 +95,87 @@
                         <i class='bx bx-x' ></i>
                     </div>
                     <ul class="links">
-                        <li><a href="#">HOME</a></li>
-                        <li>
-                        <a href="#">HTML & CSS</a>
-                        <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
-                        <ul class="htmlCss-sub-menu sub-menu">
-                            <li><a href="#">Web Design</a></li>
-                            <li><a href="#">Login Forms</a></li>
-                            <li><a href="#">Card Design</a></li>
-                            <li class="more">
-                            <span><a href="#">More</a>
-                                <i class='bx bxs-chevron-right arrow more-arrow'></i>
-                            </span>
-                            <ul class="more-sub-menu sub-menu">
-                                <li><a href="#">Neumorphism</a></li>
-                                <li><a href="#">Pre-loader</a></li>
-                                <li><a href="#">Glassmorphism</a></li>
-                            </ul>
-                            </li>
-                        </ul>
-                        </li>
-                        <li>
-                        <a href="#">JAVASCRIPT</a>
-                        <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                        <ul class="js-sub-menu sub-menu">
-                            <li><a href="#">Dynamic Clock</a></li>
-                            <li><a href="#">Form Validation</a></li>
-                            <li><a href="#">Card Slider</a></li>
-                            <li><a href="#">Complete Website</a></li>
-                        </ul>
-                        </li>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About US</a></li>
+                        <li><a href="#">Fee</a></li>
+                        <li><a href="#">Contact us</a></li>
                     </ul>
                     </div>
-                    <div class="search-box">
-                    <i class='bx bx-search'></i>
-                    <div class="input-box">
-                        <input type="text" placeholder="Search...">
-                    </div>
+                    <div class="">
+                        <a href="#" class="btn-demo ms-lg-3">BOOK DEMO NOW</a>
                     </div>
                 </div>
             </nav>
         </div>
 
      </div>
-
     <!-- Menu Bar END-->
 
 
-    <!-- Banner Content -->
-    <div class="container banner-content">
-        <div class="row align-items-center">
 
-            <!-- Left Content -->
-            <div class="col-md-6">
-                <h1 class="banner-title">
-                    Way Of <span>Tuition</span><br>
-                    With Your Choice
-                </h1>
-                <a href="#" class="btn-read">Read More</a>
+<!-- Banner Content -->
+<div class="container banner-content">
+    <div class="row align-items-center">
+        <!-- Left Content -->
+        <div class="col-6 col-md-6 banner-title banner-left position-relative">
+            <h1>
+                Way Of <span>Tuition</span>
+                <br>With Your Choice
+                <span class="choice-text">
+                    
+                    <img src="images/icon-paper-pin.png" class="paper-pin" alt="">
+                </span>
+            </h1>
+            <div class="col-12 text-center mt-4">
+                <div class="btn-wrapper">
+                    <img src="images/icon-plane.png" class="plane-icon" alt="">
+                    <a href="#" class="btn-read">Read More</a>
+                </div>
             </div>
-
-            <!-- Right Image -->
-            <div class="col-md-6 text-end">
-                <img src="images/students.jpg" class="banner-img" alt="Students">
-            </div>
-
         </div>
+
+        <!-- Right Image -->
+        <div class="col-6 col-md-6 d-flex justify-content-center align-items-center position-relative">
+            <div class="image-wrapper-student">
+                <img src="images/shape-1.png" class="bg-shape" alt="">
+                <div class="banner-img">
+                    <img src="images/students.jpg" alt="Students">
+                </div>
+            </div>
+            <!-- WhatsApp Icon -->
+            <div class="whatsapp-icon">
+                <a href="https://wa.me/+918086002912" target="_blank">
+                    <img src="images/whatapp_icon.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+
     </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </section>
-
+<!-- -----------Section-2------------ -->
 
 
 
@@ -166,10 +185,13 @@
 
 
     <!-- Bootstrap JS Bundle (with Popper) -->
+
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="menus/js/js.js"></script>
+
     
 
-    <script src="menus/js/js.js"></script>
+ 
 
 </body>
 </html>

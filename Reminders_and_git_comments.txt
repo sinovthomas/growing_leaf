@@ -1,0 +1,6 @@
+--------------GIT HUB------------------------------
+git status
+git add .
+git commit -m "Updated navbar responsiveness"
+git push
+--------------GIT HUB------------------------------
