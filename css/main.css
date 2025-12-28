@@ -1,16 +1,19 @@
 .div_border {
     border: 2px solid rgb(177, 4, 4);
 }
+
 .top_bar {
-    padding-top:15px ;
+    padding-top: 15px;
     padding-bottom: 10px;
     /* padding: 10px; */
 }
+
 /* ===============LOGO Section============ */
 .logo {
     width: 50px;
     height: 50px;
 }
+
 .logo_h1 {
     color: #fe0000;
     font-family: 'Noto Serif', serif;
@@ -22,31 +25,37 @@
     font-family: 'Noto Serif', serif;
     font-size: 22px;
 }
-.logo_h3{
+
+.logo_h3 {
     color: #000;
     font-family: 'Noto Serif', serif;
     font-size: 18px;
     text-align: center;
     text-transform: uppercase;
 }
+
 /* ===============LOGO Section END============ */
 /* ===============Top Contact Section============ */
 .icon-blue {
-    color: #202c45; /* Bootstrap primary blue */
+    color: #202c45;
+    /* Bootstrap primary blue */
     font-size: 1.75rem;
 }
-.contact-text{
+
+.contact-text {
     text-align: center;
-    line-height: 1.2; 
+    line-height: 1.2;
 }
+
 .contact-label {
     font-size: 12px;
     font-family: 'Noto Serif', serif;
     font-weight: 600;
     letter-spacing: 0.5px;
     color: #202c45;
-    
+
 }
+
 .contact-number {
     font-size: 17px;
     font-family: 'Noto Serif', serif;
@@ -54,6 +63,7 @@
     margin-top: 0px;
     color: #202c45;
 }
+
 .contact-email {
     font-size: 14px;
     font-family: 'Noto Serif', serif;
@@ -61,13 +71,15 @@
     margin-top: 0px;
     color: #202c45;
 }
-.contact-location{
+
+.contact-location {
     font-size: 14px;
     font-family: 'Noto Serif', serif;
     font-weight: 500;
     margin-top: 0px;
     color: #202c45;
 }
+
 /* .custom-border {
     border-right: 1.5px solid #0d6efd;
 } */
@@ -86,68 +98,93 @@
     font-weight: 600;
     white-space: nowrap;
 }
+
 /* ================Book Demo Button In Menu Bar END================== */
+/* =========================
+   Banner (optimized + responsive)
+========================= */
 
-
-
-
-/* Hero section */
 .hero-banner {
-    background: #f4f6f8 url("../images/banner_BG.jpg") no-repeat center/cover;
+    background: #f4f6f8 url("../images/banner_BG.jpg") no-repeat center / cover;
     position: relative;
     overflow: hidden;
 }
 
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    top: clamp(40px, 8vw, 80px);
+    right: 42%;
+    width: clamp(80px, 12vw, 120px);
+    height: clamp(50px, 8vw, 80px);
+    background-image: radial-gradient(#ff6b6b 2px, transparent 2px);
+    background-size: 12px 12px;
+    pointer-events: none;
+}
+
 /* Content spacing */
 .banner-content {
-    padding-top: 50px;
+    padding-top: clamp(18px, 5vw, 50px);
 }
 
 /* Title styling */
 .banner-title h1 {
     font-family: 'Playwrite US Trad Guides', cursive;
     color: #202c45;
-    font-size: 52px;
-    line-height: 5.5rem;
-    
+    font-size: clamp(22px, 3.2vw, 52px);
+    line-height: 2.00;
+    margin: 0;
 }
-.banner-title span{
-    
+
+.banner-title span {
     font-family: 'Noto Serif', serif;
     color: #f2184f;
-    font-size: 52px;
-
+    font-size: inherit;
+    /* keep same scale as h1 */
 }
+
+.banner-title {
+    position: relative;
+}
+
 /* Button */
 .btn-read {
     display: inline-block;
-    margin-top: 30px;
-    background: #1f2a44;
+    margin-top: clamp(10px, 2.5vw, 30px);
+    background: #171e30;
     color: #fff;
     padding: 7px 20px;
     border-radius: 6px;
     text-decoration: none;
     font-size: 15px;
+    transition: background 0.25s ease;
 }
 
 .btn-read:hover {
-    background: #162035;
+    background: #0e1f46;
 }
 
-/* ---------- IMAGE WITH SHAPE ---------- */
+/* =========================
+   IMAGE WITH SHAPE (fluid)
+========================= */
 
 .image-wrapper-student {
     position: relative;
-    width: 520px;
-    height: 360px;
+    width: min(520px, 100%);
+    /* keep your original “look” ratio, but fluid */
+    aspect-ratio: 520 / 360;
 }
 
 .banner-img {
     position: relative;
-    width: 500px;
-    height: 320px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     z-index: 2;
+
+    /* creates breathing space inside so the image doesn't hit the wrapper edges */
+    padding: clamp(0px, 1vw, 10px);
+    box-sizing: border-box;
 }
 
 .banner-img img {
@@ -156,23 +193,18 @@
     object-fit: cover;
     border: 12px solid #fff;
     background: #fff;
+    box-sizing: border-box;
 }
 
 .bg-shape {
     position: absolute;
-    top: -20px;
-    left: -30px;
+    top: clamp(-14px, -2vw, -20px);
+    left: clamp(-18px, -3vw, -30px);
     width: 100%;
     z-index: 1;
 }
 
-/* ---------- LEFT ICON EFFECTS ---------- */
 
-.banner-left {
-    position: relative;
-}
-
-/* Button + plane */
 .btn-wrapper {
     position: relative;
     display: inline-block;
@@ -180,12 +212,12 @@
 
 .plane-icon {
     position: absolute;
-    left: -300px;
+    left: clamp(-220px, -18vw, -300px);
     top: 50%;
-    width: 100px;
+    width: clamp(60px, 8vw, 100px);
+    transform: translateY(-50%);
 }
 
-/* Paper pin under text */
 .choice-text {
     position: relative;
     display: inline-block;
@@ -193,11 +225,9 @@
 
 .paper-pin {
     position: absolute;
-    bottom: -100px;
+    bottom: clamp(-80px, -10vw, -100px);
     left: 106%;
-    width: 140px;
-    /* transition: transform 0.4s ease;
-    transform: translateY(0); */
+    width: clamp(90px, 12vw, 140px);
 }
 
 .plane-icon,
@@ -205,7 +235,6 @@
 .bg-shape {
     transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-
 
 /* ONE hover trigger – everything moves together */
 .banner-content:hover .plane-icon {
@@ -219,27 +248,39 @@
 .banner-content:hover .bg-shape {
     transform: translate(12px, -8px);
 }
-/* WhatsApp icon positioning */
+
+/* =========================
+   WhatsApp icon (responsive, clean)
+========================= */
+
+/* Base (desktop-first, but responsive via clamp) */
 .whatsapp-icon {
     position: absolute;
-    right: 15px;
-    bottom: 15px;
-    width: 50px;
-    height: 50px;
+    right: clamp(10px, 2vw, 16px);
+    bottom: clamp(10px, 2vw, 16px);
+    width: clamp(38px, 5vw, 52px);
+    height: clamp(38px, 5vw, 52px);
     z-index: 5;
+    transition: transform 0.25s ease;
 }
+
 .whatsapp-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    display: block;
+    /* avoids tiny inline gap */
     cursor: pointer;
 }
 
-/* Hover effect whatapp */
-.whatsapp-icon:hover {
-    transform: scale(1.08);
-    transition: transform 0.3s ease;
+/* Hover only when hover is actually supported */
+@media (hover: hover) and (pointer: fine) {
+    .whatsapp-icon:hover {
+        transform: scale(1.08);
+    }
 }
+
+/* ========Whatsapp End================
 
 /* Decorative dots (optional) */
 .hero-banner::before {
@@ -252,456 +293,864 @@
     background-image: radial-gradient(#ff6b6b 2px, transparent 2px);
     background-size: 12px 12px;
 }
+/* -----------------About US-------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* //////////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////////// */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-/* =================Laptops (≥992px)====================== */
-/* ===============LOGO Section============ */
-.logo {
-    width: 40px;
-    height: 40px;
-}
-.logo_h1 {
-    color: #fe0000;
-    font-family: 'Noto Serif', serif;
-    font-size: 18px;
-}
-
-.logo_h2 {
-    color: #000;
-    font-family: 'Noto Serif', serif;
-    font-size: 18px;
-}
-.logo_h3{
-    color: #000;
-    font-family: 'Noto Serif', serif;
-    font-size: 12px;
-    text-align: center;
-    text-transform: uppercase;
-}
-/* ===============LOGO Section END============ */
-/* ===============Top Contact Section============ */
-.icon-blue {
-    color: #202c45; /* Bootstrap primary blue */
-    font-size: 1.5rem;
-}
-.contact-text{
-    text-align: center;
-    line-height: 1.0; 
-}
-.contact-label {
-    font-size: 12px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #202c45;
-    
-}
-.contact-number {
-    font-size: 13px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    margin-top: 0px;
-    color: #202c45;
-}
-.contact-email {
-    font-size: 10px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    margin-top: 0px;
-    color: #202c45;
-    overflow-wrap: anywhere;
-}
-.contact-location{
-    font-size: 12px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    margin-top: 0px;
-    color: #202c45;
-}
-/* .custom-border {
-    border-right: 1.5px solid #0d6efd;
-} */
-/* ===============Top Contact Section END============ */
-
-
-/* =======================BANNER======================== */
-
-/* ================Book Demo Button In Menu Bar================== */
-.btn-demo {
-    background: #ff2b55;
-    color: #fff;
-    padding: 13px 15px;
-    top: 0;
-    text-decoration: none;
-    font-weight: 600;
-    white-space: nowrap;
-}
-/* ================Book Demo Button In Menu Bar END================== */
-
-
-/* Title styling */
-.banner-title h1 {
-    font-family: 'Playwrite US Trad Guides', cursive;
-    color: #202c45;
-    font-size: 30px;
-    line-height: 5.5rem;
-    
-}
-.banner-title span{
-    
-    font-family: 'Noto Serif', serif;
-    color: #f2184f;
-    font-size: 52px;
-
-}
-/* Button */
-.btn-read {
-    display: inline-block;
-    margin-top: 30px;
-    background: #1f2a44;
-    color: #fff;
-    padding: 7px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.btn-read:hover {
-    background: #162035;
-}
-
-
-/* ---------- IMAGE WITH SHAPE ---------- */
-
-.image-wrapper-student {
-    position: relative;
-    width: 520px;
-    height: 360px;
-}
-
-.banner-img {
-    position: relative;
-    width: 400px;
-    height: 320px;
+.about-center {
+    padding: 25px 20px;
+    background: #F3F3F2;
     overflow: hidden;
+}
+
+/* LEFT VISUAL */
+.about-visual {
+    position: relative;
+    min-height: 420px;
+    display: grid;
+    place-items: center;
+}
+
+.photo-ring {
+    width: 360px;
+    height: 360px;
+    border-radius: 0 50% 50% 50%;
+    background: #f2e9df;
+    /* soft beige ring */
+    display: grid;
+    place-items: center;
+}
+
+.about-photo {
+    width: 320px;
+    height: 320px;
+    border-radius: 0 50% 50% 50%;
+    object-fit: cover;
+    display: block;
+}
+
+/* badges */
+.badge {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    animation: slow-spin 8s linear infinite;
+    transform-origin: center;
+    pointer-events: none;
+}
+
+.badge-percent {
+    top: 18px;
+    left: 18px;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #3dd6c6;
+    color: #ffffff;
+
+    animation-duration: 10s;
+}
+
+.badge-idea {
+    bottom: 33px;
+    right: 64px;
+    width: 55px;
+    height: 44px;
+    /* border-radius: 12px; */
+    background: #6c63ff;
+    color: #ffffff;
+    font-size: 20px;
+    animation-duration: 7s;
+}
+
+/* --------Rotating Animation for % & idea icon---------*/
+@keyframes slow-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* dot patterns */
+.dots {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    opacity: 0.55;
+    background-image: radial-gradient(#6c63ff 1.5px, transparent 1.5px);
+    background-size: 10px 10px;
+}
+
+.dots-left {
+    top: 24px;
+    right: -16px;
+}
+
+.dots-right {
+    bottom: 10px;
+    left: -10px;
+    background-image: radial-gradient(#ff8a4c 1.5px, transparent 1.5px);
+}
+
+/* RIGHT CONTENT */
+
+.about-title {
+    margin: 0 0 18px;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    font-weight: 900;
+    color: #1f2a37;
+    position: relative;
     z-index: 2;
 }
 
-.banner-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 12px solid #fff;
-    background: #fff;
+.about-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 18px;
+    position: relative;
+    z-index: 2;
 }
-.bg-shape {
+
+.about-list li {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 12px;
+    color: #556070;
+    line-height: 1.6;
+    font-size: 14.5px;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+/* little teal square bullet */
+.tick {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-top: 8px;
+    background: #3dd6c6;
+}
+
+/* small red sparkle/star at right */
+.spark {
     position: absolute;
-    top: -20px;
-    left: -30px;
-    width: 100%;
+    right: 100px;
+    top: 54px;
+    width: 22px;
+    height: 22px;
+    background: #ff4d4f;
+    transform: rotate(45deg);
+    border-radius: 4px;
+    box-shadow: 0 10px 22px rgba(255, 77, 79, 0.25);
+    opacity: 0.60;
+    z-index: 1;
+    pointer-events: none;
+    animation: spark-spin 6s linear infinite;
+    /* animation */
+    transform-origin: center;
+    /* combine rotation */
+}
+
+/* ----Rotating animation for Spark-------*/
+@keyframes spark-spin {
+    from {
+        transform: rotate(45deg);
+    }
+
+    to {
+        transform: rotate(405deg);
+        /* 45 + 360 */
+    }
+}
+
+/* ------------Mission&Vision--------------------- */
+/* .hero{
+    position: relative;
+    min-height: 320px;
+    background: #fff; 
+    margin-left: 200px;
+} */
+.about-split{
+  position: relative;
+  padding: 50px 0px 0px 0px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.corner-pill{
+    position: absolute;
+    top: clamp(-234px, -7vw, -40px);
+    left: clamp(-14px, -6vw, -40px);
+    width: clamp(70px, 8vw, 80px);
+    height: clamp(170px, 20vw, 240px);
+    background: #6956f9;
+    border-radius: 999px;
+    transform: rotate(135deg);
+    transform-origin: center;
+    opacity: 0.80;
     z-index: 1;
 }
-
-
-
-
-/* =======================BANNER END======================== */
-
+.corner-pill_btm{
+    position: absolute;
+    bottom: -83px;
+    right: -35px;
+    width: 58px;
+    height: 240px;
+    background: #6956f9;
+    border-radius: 999px;
+    transform: rotate(135deg);
+    transform-origin: center;
+    opacity: 0.8;
+    z-index: 1;
 }
-
-/* ================Laptops (≥992px) ENDS======================= */
-/* //////////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////////////////////////////////////////////////////////////////// */
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-/* ===================TABLET (≥768px)======================== */
-/* ===============LOGO Section============ */
-.logo {
-    width: 50px;
-    height: 50px;
-}
-.logo_h1 {
-    color: #fe0000;
-    font-family: 'Noto Serif', serif;
-    font-size: 20px;
-}
-
-.logo_h2 {
-    color: #000;
-    font-family: 'Noto Serif', serif;
-    font-size: 20px;
-}
-.logo_h3{
-    color: #000;
-    font-family: 'Noto Serif', serif;
-    font-size: 14px;
-    text-align: center;
-    text-transform: uppercase;
-}
-/* ===============LOGO Section END============ */
-/* ===============Top Contact Section============ */
-.icon-blue {
-    margin-top: 7px;
-    color: #202c45; /* Bootstrap primary blue */
-    font-size: 1.0rem;
-}
-.contact-text{
-    margin-top: 5px;
-    text-align: center;
-    line-height: .8 ; 
-}
-.contact-label {
-    font-size: 10px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #202c45;
-    
-}
-.contact-number {
-    font-size: 9px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    margin-top: 0px;
-    color: #202c45;
-}
-.contact-email {
-    font-size: 10px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    margin-top: 0px;
-    color: #202c45;
-    overflow-wrap: anywhere;
-}
-.contact-location{
-    font-size: 10px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    margin-top: 0px;
-    color: #202c45;
-}
-/* ===============Top Contact Section END============ */
-
-
-/* =======================BANNER======================== */
-
-/* ================Book Demo Button In Menu Bar================== */
-.btn-demo {
-    background: #ff2b55;
-    color: #fff;
-    padding: 13px 15px;
-    top: 0;
-    text-decoration: none;
-    font-weight: 600;
-    white-space: nowrap;
-}
-/* ================Book Demo Button In Menu Bar END================== */
-
-.hero-banner {
-    background: #f4f6f8 url("../images/banner_BG.jpg") no-repeat center/cover;
+.mv_tittle{
     position: relative;
-    overflow: hidden;
-    height: 375px;
+    padding: 15px 10px 10px 10px;
+    z-index: 2;
+}
+.mv_tittle h2{
+    margin: 0 0 14px;
+    font-size: 32px;
+    line-height: 1.15;
+    color: #101828;
+    font-weight: 800;
+    z-index: 2;
+}
+.tabs-container {
+  max-width: 900px;
+  margin: 0px 10px 10px 10px;
+  font-family: 'Inter', sans-serif;
+}
+/* Tabs */
+.tabs {
+  display: inline-flex;
+  gap: 0px;
+  margin-bottom: 16px;
+}
+.tab-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  border: none;
+  background: #0e2a47;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative; 
+  z-index: 2; 
+}
+/* LEFT button */
+.tab-btn:first-child {
+  border-radius: 10px 0 0 10px;
+}
+/* RIGHT button */
+.tab-btn:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.tab-btn.active {
+  background: #6374ff;
+  color: #fff;
 }
 
+.tab-btn:hover {
+  transform: translateY(-1px);
+}
+/* Tab Content */
+.tab-content {
+  background: #fff;
+  padding: 10px 2px;
+  min-height: 420px; /* manual guess */
+}
 
-/* Title styling */
-.banner-title h1 {
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.35s ease;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.tab-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/tab_bg_icn.png");
+    background-repeat: no-repeat;
+    /* background-size: 5%; */
+    opacity: 0.58;
+    z-index: -1;
+    top: 428px;
+    left: 200px;
+}
+/* Small animation for TAB*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ /* Tab Icons */
+.icon-white {
+    color: #ffffff;
+    /* Bootstrap primary blue */
+    font-size: 1.5rem;
+    padding-right: 7px;
+}
+
+.mission_vision_righside_image {
+    position: relative;     /* anchor for absolute positioning */
+    width: 40%;
+}
+
+.mission_vision_righside_image img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+}
+
+/* Badge 10+ years*/
+.experience-badge {
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    background: linear-gradient(
+        90deg,
+        #fbf2ef,
+        #e5f1fc,
+        #e4fcf5
+    );
+    border: 1px solid #3b619d;
+    border-radius: 10px;
+    padding: 22px 18px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+.experience-badge .number {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: #6c63ff;
+    line-height: 1;
+}
+
+.experience-badge .text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2a44;
+}
+/* ------------Mission&Vision END--------------------- */
+
+
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px)
+/* @media (max-width: 991.98px)  */
+{
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo_h1 {
+        color: #fe0000;
+        font-family: 'Noto Serif', serif;
+        font-size: 18px;
+    }
+
+    .logo_h2 {
+        color: #000;
+        font-family: 'Noto Serif', serif;
+        font-size: 18px;
+    }
+
+    .logo_h3 {
+        color: #000;
+        font-family: 'Noto Serif', serif;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    /* ===============LOGO Section END============ */
+    /* ===============Top Contact Section============ */
+    .icon-blue {
+        color: #202c45;
+        /* Bootstrap primary blue */
+        font-size: 1.5rem;
+    }
+
+    .contact-text {
+        text-align: center;
+        line-height: 1.0;
+    }
+
+    .contact-label {
+        font-size: 12px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #202c45;
+
+    }
+
+    .contact-number {
+        font-size: 13px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #202c45;
+    }
+
+    .contact-email {
+        font-size: 10px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #202c45;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-location {
+        font-size: 12px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #202c45;
+    }
+
+    .btn-demo {
+        background: #ff2b55;
+        color: #fff;
+        padding: 13px 15px;
+        top: 0;
+        text-decoration: none;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .banner-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .banner-title h1 {
     font-family: 'Playwrite US Trad Guides', cursive;
     color: #202c45;
-    font-size: 25px;
-    line-height: 5.5rem;
-    
-}
-.banner-title span{
-    
-    font-family: 'Noto Serif', serif;
-    color: #f2184f;
-    font-size: 30px;
-
-}
-
-
-.row.align-items-center {
-        align-items: flex-start !important;
+    font-size: 35px;
+    line-height: 1.8;
     }
 
 
+    .about-wrap {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
 
+    .about-visual {
+        min-height: 380px;
+    }
 
+    .photo-ring {
+        width: 320px;
+        height: 320px;
+    }
 
-/* Button */
-.btn-read {
-    display: inline-block;
-    margin-top: 0px;
-    background: #1f2a44;
-    color: #fff;
-    padding: 7px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 15px;
-}
+    .about-photo {
+        width: 285px;
+        height: 285px;
+    }
 
-.btn-read:hover {
-    background: #162035;
-}
-
-
-/* ---------- IMAGE WITH SHAPE ---------- */
-
-.image-wrapper-student {
-    position: relative;
-    width: 340px;
-    height: 230px;
-}
-
-.banner-img {
-    position: relative;
-    width: 340px;
-    height: 225px;
-    overflow: hidden;
-    z-index: 2;
-}
-
-.banner-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 12px solid #fff;
-    background: #fff;
-}
-.bg-shape {
-    position: absolute;
-    top: -20px;
-    left: -30px;
-    width: 100%;
-    z-index: 1;
-}
-
-/* WhatsApp icon positioning */
-.whatsapp-icon {
-    position: absolute;
-    right: 10px;
-    bottom: -10px;
-    width: 40px;
-    height: 40px;
-    z-index: 5;
-}
-.whatsapp-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    cursor: pointer;
-}
-
-/* Hover effect whatapp */
-.whatsapp-icon:hover {
-    transform: scale(1.08);
-    transition: transform 0.3s ease;
-}
-
+    .spark {
+        display: none;
+    }
 
 }
-/* ====================TABLET (≥768px) END============================================== */
+
+@media (min-width: 768px) and (max-width: 991.98px)
+/* @media (max-width: 767.98px)  */
+{
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo_h1 {
+        color: #fe0000;
+        font-family: 'Noto Serif', serif;
+        font-size: 20px;
+    }
+
+    .logo_h2 {
+        color: #000;
+        font-family: 'Noto Serif', serif;
+        font-size: 20px;
+    }
+
+    .logo_h3 {
+        color: #000;
+        font-family: 'Noto Serif', serif;
+        font-size: 14px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    /* ===============LOGO Section END============ */
+    /* ===============Top Contact Section============ */
+    .icon-blue {
+        margin-top: 7px;
+        color: #202c45;
+        /* Bootstrap primary blue */
+        font-size: 1.0rem;
+    }
+
+    .contact-text {
+        margin-top: 5px;
+        text-align: center;
+        line-height: .8;
+    }
+
+    .contact-label {
+        font-size: 10px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #202c45;
+
+    }
+
+    .contact-number {
+        font-size: 9px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #202c45;
+    }
+
+    .contact-email {
+        font-size: 10px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #202c45;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-location {
+        font-size: 10px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #202c45;
+    }
+
+    /* ===============Top Contact Section END============ */
+
+    /* ================Book Demo Button In Menu Bar================== */
+    .btn-demo {
+        background: #ff2b55;
+        color: #fff;
+        padding: 13px 15px;
+        top: 0;
+        text-decoration: none;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    /* ================Book Demo Button In Menu Bar END================== */
+
+    .banner-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    /* Title styling */
+    .banner-title h1 {
+        font-family: 'Playwrite US Trad Guides', cursive;
+        color: #202c45;
+        font-size: 22px;
+        line-height: 1.8;
+
+    }
+
+    .banner-title span {
+        font-family: 'Noto Serif', serif;
+        color: #f2184f;
+        font-size: 30px;
+    }
+
+    /* Button */
+    .btn-read {
+        display: inline-block;
+        margin-top: 0px;
+        background: #1f2a44;
+        color: #fff;
+        padding: 3px 10px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 12px;
+    }
+    /* ---------- IMAGE WITH SHAPE ---------- */
+    .image-wrapper-student {
+        position: relative;
+        width: 340px;
+        height: 230px;
+    }
+    .banner-img {
+        position: relative;
+        width: 340px;
+        height: 225px;
+        overflow: hidden;
+        z-index: 2;
+    }
+    .banner-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 12px solid #fff;
+        background: #fff;
+    }
+    .bg-shape {
+        position: absolute;
+        top: -20px;
+        left: -30px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    /* WhatsApp icon positioning */
+    .whatsapp-icon {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        bottom: 10px;
+        /* keep consistent, avoid -10px */
+    }
+
+    /* Mission Vision Tab Section */
+    .mv_rgt_image {
+        display: none !important;
+    }
+
+    .mission_vision_leftside {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .experience-badge {
+        position: relative;
+        margin: 0px 20px 0px 0px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 13px 18px;
+        z-index: 2;
+
+    }
+    /* RIGHT SIDE → full width (only for badge) */
+    .mission_vision_righside_image {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    /* Mission Vision Tab Section END */
+
+}
+
 /* ================================================================================================== */
+/* Mobile: make icons less intrusive */
+@media (min-width: 350px) and (max-width: 767.98px)
+{
+    /* ===============LOGO Section============ */
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
 
+    .logo_h1 {
+        color: #fe0000;
+        font-family: 'Noto Serif', serif;
+        font-size: 15px;
+    }
 
-/* @media (min-width: 576px) and (max-width: 767.98px) */
-@media (min-width: 300px) and (max-width: 767.98px)
- {
-/* ==================================================================
-Large Phones
-================================================================== */
-/* ===============LOGO Section============ */
-.logo {
-    width: 40px;
-    height: 40px;
-}
-.logo_h1 {
-    color: #fe0000;
-    font-family: 'Noto Serif', serif;
-    font-size: 15px;
-}
+    .logo_h2 {
+        color: #000;
+        font-family: 'Noto Serif', serif;
+        font-size: 15px;
+    }
 
-.logo_h2 {
-    color: #000;
-    font-family: 'Noto Serif', serif;
-    font-size: 15px;
-}
-.logo_h3{
-    color: #000;
-    font-family: 'Noto Serif', serif;
-    font-size: 12px;
-    text-align: center;
-    text-transform: uppercase;
-}
-/* ===============LOGO Section END============ */
-/* ===============Top Contact Section============ */
-.icon-blue {
-    margin-top: 7px;
-    color: #202c45; /* Bootstrap primary blue */
-    font-size: 1.0rem;
-}
-.contact-text{
-    margin-top: 5px;
-    text-align: center;
-    line-height: .8 ; 
-}
-.contact-label {
-    font-size: 10px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    color: #202c45;
-    
-}
-.contact-number {
-    font-size: 9px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    margin-top: 0px;
-    color: #202c45;
-}
-.contact-email {
-    font-size: 10px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    margin-top: 0px;
-    color: #202c45;
-    overflow-wrap: anywhere;
-}
-.contact-location{
-    font-size: 10px;
-    font-family: 'Noto Serif', serif;
-    font-weight: 500;
-    margin-top: 0px;
-    color: #202c45;
-    overflow-wrap: anywhere;
-}
+    .logo_h3 {
+        color: #000;
+        font-family: 'Noto Serif', serif;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+    }
 
+    /* ===============LOGO Section END============ */
+    /* ===============Top Contact Section============ */
+    .icon-blue {
+        margin-top: 7px;
+        color: #202c45;
+        /* Bootstrap primary blue */
+        font-size: 1.0rem;
+    }
 
+    .contact-text {
+        margin-top: 5px;
+        text-align: center;
+        line-height: .8;
+    }
+
+    .contact-label {
+        font-size: 10px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #202c45;
+
+    }
+
+    .contact-number {
+        font-size: 9px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #202c45;
+    }
+
+    .contact-email {
+        font-size: 10px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #202c45;
+        overflow-wrap: anywhere;
+    }
+
+    .contact-location {
+        font-size: 10px;
+        font-family: 'Noto Serif', serif;
+        font-weight: 500;
+        margin-top: 0px;
+        color: #202c45;
+        overflow-wrap: anywhere;
+    }
+
+    .banner-content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .banner-title {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Title styling */
+    .banner-title h1 {
+        font-family: 'Playwrite US Trad Guides', cursive;
+        color: #202c45;
+        font-size: 22px;
+        line-height: 1.8;
+
+    }
+
+    .banner-title span {
+        font-family: 'Noto Serif', serif;
+        color: #f2184f;
+        font-size: 30px;
+    }
+
+    /* Button */
+    .btn-read {
+        display: inline-block;
+        margin-top: 0px;
+        background: #1f2a44;
+        color: #fff;
+        padding: 3px 10px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 12px;
+    }
+    .image-wrapper-student {
+        display: none !important;
+    }
+    .plane-icon {
+        left: -120px;
+    }
+    .paper-pin {
+        bottom: -70px;
+        width: 110px;
+    }
+    .whatsapp-icon {
+        position: fixed;
+        right: 12px;
+        top: 260px;
+        width: 38px;
+        height: 38px;
+        margin: 0;
+        left: auto;
+        transform: none;
+    }
+    .hero-banner::before {
+        right: 18%;
+    }
+     /* Mission Vision Tab Section */
+    .mv_rgt_image {
+        display: none !important;
+    }
+
+    .mission_vision_leftside {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .experience-badge {
+        position: relative;
+        margin: 0px 20px 0px 0px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 13px 18px;
+        z-index: 2;
+
+    }
+    /* RIGHT SIDE → full width (only for badge) */
+    .mission_vision_righside_image {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+        text-align: center;
+    }
+     /* Mission Vision Tab Section END */
 }
-
-
 /* =======================Large Phone END=============================
-
-
-
-
-
