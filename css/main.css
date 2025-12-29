@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .div_border {
     border: 2px solid rgb(177, 4, 4);
 }
@@ -33,6 +36,15 @@
     text-align: center;
     text-transform: uppercase;
 }
+.title_link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title_link:hover {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* ===============LOGO Section END============ */
 /* ===============Top Contact Section============ */
@@ -62,14 +74,21 @@
     font-weight: 500;
     margin-top: 0px;
     color: #202c45;
+    text-decoration: none;
 }
-
+.contact-number:hover {
+    text-decoration: underline;
+}
 .contact-email {
     font-size: 14px;
     font-family: 'Noto Serif', serif;
     font-weight: 500;
     margin-top: 0px;
     color: #202c45;
+    text-decoration: none;
+}
+.contact-email:hover {
+    text-decoration: underline;
 }
 
 .contact-location {
@@ -78,8 +97,11 @@
     font-weight: 500;
     margin-top: 0px;
     color: #202c45;
+    text-decoration: none;
 }
-
+.contact-location:hover {
+    text-decoration: underline;
+}
 /* .custom-border {
     border-right: 1.5px solid #0d6efd;
 } */
@@ -667,6 +689,255 @@
 /* ------------Mission&Vision END--------------------- */
 
 
+/* ------------ Classes Section------------------------*/
+.commitment-section {
+  width: 100%;
+  background-image: url("../images/woodern_pattern_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+}
+/* White card behind all tabs */
+.tab-card-main{
+    margin: auto 0;
+} 
+.tab-card-classes {
+  background: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #494949;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+/* Individual tab buttons */
+.nav-pills .nav-link {
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  padding: 14px 16px;              /* bring this back */
+  margin-bottom: 12px;
+  font-weight: 450;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;      /* LEFT align */
+  gap: 12px;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+.nav-pills .nav-link i {
+  font-size: 18px;
+  min-width: 22px;                 /* keeps all text aligned */
+  text-align: center;
+  color: inherit;                  /* follows active/normal color */
+}
+/* If you wrapped text in <span> */
+.nav-pills .nav-link span {
+  flex: 1;
+}
+/* Hover state */
+.nav-pills .nav-link:hover {
+  background: #f8fafc;
+}
+/* Active tab */
+.nav-pills .nav-link.active {
+  background: #0e2a47;
+  color: #ffffff;
+  border-color: #0e2a47;
+  box-shadow: 0 8px 20px rgba(31, 42, 68, 0.35);
+}
+.tab-content {
+  min-height: 240px;
+}
+
+.content-panel {
+  background: linear-gradient(
+    135deg,
+    #23253b,
+    #2d7a9e
+  );
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  text-align: justify;
+
+}
+/* ------------ Classes Section END------------------------*/
+/* ------------ Fee Section------------------------*/
+/* Section background */
+.fee-section {
+    padding-top: 3rem !important;
+    padding-bottom: 120px !important ;  /* important */
+    background: linear-gradient(
+    135deg,
+    #f0f7ff 0%,
+    #eef0f3 100%
+  );
+
+}
+
+
+/* Left title */
+.fee-title {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: #0e2a47;
+}
+
+.fee-title span {
+  font-weight: 800;
+}
+
+/* Circle cards */
+.fee-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #c7c7c7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Icon */
+.fee-circle img {
+  width: 48px;
+  margin-bottom: 12px;
+}
+
+/* Text */
+.fee-circle p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Hover effect */
+.fee-circle:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+/* ------------ Fee Section END------------------------*/
+
+
+
+
+
+/* Wrapper for the floating form */
+.contact-float-wrap {
+  margin-top: -90px;     /* pulls up into Fee section */
+  margin-bottom: -90px;  /* pushes down into Footer */
+  z-index: 3;
+}
+
+/* The floating card */
+.contact-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 32px;
+  border: 1px solid #eef2f7;
+  position: relative;
+  z-index: 5;
+}
+
+/* Make inputs look like your screenshot (clean underline feel) */
+.contact-input {
+  border: 0;
+  border-bottom: 1px solid #e6edf7;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: none !important;
+}
+
+.contact-input:focus {
+  border-bottom-color: #18284a;
+}
+
+/* Footer */
+.site-footer {
+  background: #18284a;
+  padding-top: 140px; /* creates room behind the overlap */
+  padding-bottom: 75px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Social icon container */
+.footer-social a {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Individual brand colors */
+.footer-social .fb {
+  background: #1877f2;
+}
+
+.footer-social .ig {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+}
+
+/* Hover */
+.footer-social a:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Placeholder for map area (remove if you use iframe) */
+.footer-map {
+  width: 100%;
+  height: 160px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(20%) contrast(1.05);
+}
+
+.footer-contact{
+    padding-left: 100px;
+}
+
+.copyright-bar {
+  background: #2a3a63;   /* slightly lighter than footer */
+  padding: 12px 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 13px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.powerd-by a{
+    color: #fff;
+}
+
+
+
+
+
 
 
 
@@ -983,6 +1254,10 @@
     }
     /* Mission Vision Tab Section END */
 
+    .footer-contact{
+        padding-left: 15px;
+    }
+
 }
 
 /* ================================================================================================== */
@@ -1152,5 +1427,20 @@
         text-align: center;
     }
      /* Mission Vision Tab Section END */
+
+     /* -----Fee Section-----*/
+     /* Left title */
+    .fee-title {
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 700;
+    color: #0e2a47;
+    text-align: center;
+    }
+
+     /* -----Fee Section END-----*/
+    .footer-contact{
+    padding-left: 15px;
+    }
+
 }
 /* =======================Large Phone END=============================

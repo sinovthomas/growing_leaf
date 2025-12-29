@@ -33,13 +33,17 @@
                 <!-- Logo section (col-6) -->
                 <div class="col-12 col-md-5">
                     <div class="d-flex gap-2">
-                        <img src="images/logo.jpg" alt="Logo" class="logo">
-                        <div class="">
-                            <h1 class="logo_h1 mb-0">
-                                Growing <span class="logo_h2">Leaf</span>
-                            </h1>
-                            <h4 class="mb-0 logo_h3">Education</h4>
-                        </div>
+                        <a href="index.html" class="logo-link">
+                            <img src="images/logo.jpg" alt="Logo" class="logo">
+                        </a>
+                        <a href="index.html" class="title_link">
+                            <div class="">
+                                <h1 class="logo_h1 mb-0">
+                                    Growing <span class="logo_h2">Leaf</span>
+                                </h1>
+                                <h4 class="mb-0 logo_h3">Education</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <!-- Logo section (col-6) -->
@@ -49,7 +53,7 @@
                         <i class="fa-solid fa-phone-square icon-blue"></i>
                         <div class="contact-text">
                             <span class="contact-label">Call Anytime</span><br>
-                            <span class="contact-number">+91-9446071741</span>
+                            <a href="tel:+919446071741" class="contact-number">+91-9446071741</a>
                         </div>
                     </div>
                 </div>
@@ -60,7 +64,9 @@
                         <i class="fa-solid fa-envelope icon-blue"></i>
                         <div class="contact-text">
                             <span class="contact-label">Send Email</span><br>
-                            <span class="contact-email">growingleaf.ekm@gmail.com</span>
+                                <a href="mailto:growingleaf.ekm@gmail.com" class="contact-email">
+                                    growingleaf.ekm@gmail.com
+                                </a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +77,14 @@
                         <i class="fa fa-map-marker icon-blue"></i>
                         <div class="contact-text">
                             <span class="contact-label">Location</span><br>
-                            <span class="contact-location">Earnakulam</span>
+                                <a 
+                                    href="https://maps.app.goo.gl/3TYbjK9A6uS26YKX6"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="contact-location"
+                                >
+                                    Ernakulam
+                                </a>
                         </div>
                     </div>
                 </div>
@@ -97,14 +110,14 @@
                     <i class='bx bx-x' ></i>
                 </div>
                 <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About US</a></li>
-                    <li><a href="#">Fee</a></li>
-                    <li><a href="#">Contact us</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about-us">About US</a></li>
+                    <li><a href="#fee-section">Fee</a></li>
+                    <li><a href="#contact-form">Contact us</a></li>
                 </ul>
                 </div>
                 <div class="">
-                    <a href="#" class="btn-demo ms-lg-3">BOOK DEMO NOW</a>
+                    <a href="#contact-form" class="btn-demo ms-lg-3">BOOK DEMO NOW</a>
                 </div>
             </div>
         </nav>
@@ -128,7 +141,7 @@
                 <div class="col-12 text-center mt-4">
                     <div class="btn-wrapper">
                         <img src="images/icon-plane.png" class="plane-icon" alt="">
-                        <a href="#" class="btn-read">Read More</a>
+                        <a href="#about-us" class="btn-read">Read More</a>
                     </div>
                 </div>
             </div>
@@ -154,7 +167,7 @@
 <!-- -----------Section-2------------ -->
 
 <!-- -----------Section-3------------ -->
-<section class="about-center" id="about">
+<section id="about-us" class="about-center" id="about">
   <div class="container py-2 py-lg-4">
     <div class="row align-items-center g-4 g-lg-5">
         <!-- LEFT: image block -->
@@ -325,7 +338,319 @@
 </section>
 <!--  -----------Section 4 END---------------- -->
 
+<!-- -----------Section 5 ----------------------->
+<section class="py-5 commitment-section">
+  <div class="container">
+    <div class="row align-items-center">
 
+      <!-- LEFT SIDE : Tabs + Content (col-7) -->
+      <div class="col-12 col-lg-12"> 
+
+        <div class="row g-4">
+
+          <!-- Tabs -->
+            <div class="col-12 col-md-5 tab-card-main">
+
+                <div>
+                    <!-- if need right side image change col-lg-12 to col-lg-7 -->
+                    <h2 class="mb-4 fw-bold">
+                    Our Commitment to Learn,<br>Grow & Success
+                    </h2>
+                </div>
+                <div class="nav flex-column nav-pills tab-card-classes" id="tuition-tabs" role="tablist" >
+
+                <button class="nav-link active"
+                        id="individual-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#individual"
+                        type="button"
+                        role="tab">
+                <i class="fa fa-user"></i>
+                <span>Individual Tuition</span>
+                </button>
+
+                <button class="nav-link"
+                        id="batch-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#batch"
+                        type="button"
+                        role="tab">
+                <i class="fa fa-users"></i>
+                <span>Batch Tuition</span>
+                </button>
+
+                <button class="nav-link"
+                        id="competitive-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#competitive"
+                        type="button"
+                        role="tab">
+                <i class="fa-solid fa-list-check"></i>
+                <span>Competitive Exam Classes</span>
+                </button>
+                </div>
+            </div>
+
+          <!-- Tab Content -->
+          <div class="col-12 col-md-7">
+            <div class="tab-content p-4 rounded shadow-sm content-panel text-white">
+
+              <!-- Individual Tuition -->
+              <div class="tab-pane fade show active"
+                   id="individual"
+                   role="tabpanel">
+                <p>
+                  Our individual tuition programs are built around the belief that every learner 
+                  deserves personalized attention and a customized approach to education. 
+                  Through one-on-one sessions with expert tutors, students benefit from focused 
+                  guidance that helps them master core concepts, overcome academic challenges, 
+                  and progress at their own pace.Our individual tuition programs are built around 
+                  the belief that every learner deserves personalized attention and a customized 
+                  approach to education. Through one-on-one sessions with expert tutors, students 
+                  benefit from focused guidance that helps them master core concepts, overcome 
+                  academic challenges, and progress at their own pace.
+                </p>
+                <p>
+                    A unique feature of our program is that students can select their preferred tutor 
+                    after a free demo class, ensuring comfort and compatibility in the learning process. 
+                    Flexible scheduling allows students to choose convenient class timings, and fees are 
+                    charged only for the sessions attended, offering complete flexibility.
+                </p>
+                <p>
+                    Beyond subject tutoring, students also gain access to academic and exam counseling 
+                    at no extra cost. This ensures they are not only improving academically but also receiving 
+                    holistic support in time management, exam preparation, and study planning, making their 
+                    learning journey well-rounded and effective.
+                </p>
+                
+              </div>
+
+              <!-- Batch Tuition -->
+              <div class="tab-pane fade"
+                   id="batch"
+                   role="tabpanel">
+                <p>
+                    Our batch tuition programs are designed to combine the benefits of group learning with the 
+                    personalized care each student needs. At our Kochi center in Panampilly Nagar, we conduct offline 
+                    batch classes for Classes 8 to 12, with a maximum of 15 students per batch to maintain quality and 
+                    attention for every learner.
+                </p>
+                <p>
+                    For students outside Kochi, we extend the same excellence through online batch tuition, structured 
+                    for 5 to 12 students per batch. This small group format ensures interaction, collaboration, and healthy 
+                    peer learning while still allowing tutors to provide individual attention.
+                </p>
+                <p>
+                    Every student also receives free academic counseling and exam guidance, ensuring they are not only 
+                    learning but also gaining strategies for better performance. With transparent pricing, flexible plans, 
+                    subject-focused packages, and a 100% fair refund policy, Growing Leaf Education provides complete value 
+                    and convenience for every learner.
+                </p>
+              </div>
+
+              <!-- Competitive Exams -->
+              <div class="tab-pane fade"
+                   id="competitive"
+                   role="tabpanel">
+                <p>
+                  Our academic guidance goes beyond school programs, extending to college and university students who 
+                  need advanced support. At the higher education level, we provide tuition for diverse courses such as B.Tech, 
+                  undergraduate degrees, and postgraduate programs. Both technical and non-technical subjects are covered, 
+                  with an emphasis on strengthening core concepts, encouraging practical application, and building a deeper 
+                  understanding. This ensures learners are ready not only for exams but also for real-world challenges.
+                </p>
+                <p>
+                  We also offer focused coaching for competitive examinations, where students gain access to proven strategies, 
+                  structured study plans, and regular practice sessions. By combining conceptual knowledge with effective 
+                  problem-solving methods, we help learners approach demanding tests with confidence and precision.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE IMAGE (col-5) -->
+      <!-- <div class="col-12 col-lg-5 text-center mt-4 mt-lg-0">
+        <img src="images/class_room.jpg"
+             alt="Classroom"
+             class="img-fluid rounded">
+      </div> -->
+
+    </div>
+  </div>
+</section>
+<!-- -----------Section 5 END----------------------->
+
+<!-- ----------------Section 6----------------- -->
+<section id="fee-section" class="fee-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left content -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <h2 class="fee-title">
+          Offering Flexible & <br>
+          <span>Transparent Fee</span>
+        </h2>
+      </div>
+
+      <!-- Right circles -->
+      <div class="col-lg-7">
+        <div class="row justify-content-center g-4">
+
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="fee-circle text-center">
+              <img src="images/pay-per-class.png" alt="">
+              <p>Pay per<br>Class System</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="fee-circle text-center">
+              <img src="images/hourly-rate.png" alt="">
+              <p>Hourly Rate<br>Scheme</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="fee-circle text-center">
+              <img src="images/packages.png" alt="">
+              <p>Monthly & Yearly<br>Packages</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ----------------Section 6 END----------------- -->
+
+<!-- ----------------Section 7 ----------------- -->
+<!-- ===== Floating Contact Section (Overlapping Card) ===== -->
+<section id="contact-form" class="contact-float-wrap position-relative">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <div class="contact-card shadow-sm">
+          <h4 class="mb-4 fw-bold">Send us a message</h4>
+
+          <form>
+            <div class="row g-3">
+              <div class="col-12">
+                <input type="text" class="form-control contact-input" placeholder="Name">
+              </div>
+
+              <div class="col-12 col-md-6">
+                <input type="email" class="form-control contact-input" placeholder="Email*">
+              </div>
+
+              <div class="col-12 col-md-6">
+                <input type="text" class="form-control contact-input" placeholder="Phone">
+              </div>
+
+              <div class="col-12">
+                <textarea class="form-control contact-input" rows="4" placeholder="Message"></textarea>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-success px-4">
+                  Get In Touch
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ----------------Section 7 END----------------- -->
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-12 col-lg-4 text-white">
+        <h5 class="mb-3">Growing Leaf</h5>
+        <p class="mb-0 small">
+          60/479 B, Koithara Complex,<br>
+          Koithara Rd, Panampilly Nagar,<br>
+          Ernakulam, Kerala 682036
+        </p>
+        <!-- Social icons -->
+        <div class="footer-social d-flex gap-2 mt-2">
+            <a href="#" class="social-icon fb" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon ig" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+      </div>
+        
+
+      <div class="col-12 col-lg-4">
+        <!-- Put map or image here -->
+        <div class="footer-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.
+                798832197375!2d76.29374307569715!3d9.
+                950688973879904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                1!3m3!1m2!1s0x3b08735e118bf5eb%3A0x590386a18726a9fb!2sGrowing%20Leaf%
+                20Education%20-%20Online%20%26%20Offline%20Tuition%20for%20School%20%26%
+                20College%20students%2C%20STATE%2C%20CBSE%2C%20ICSE%2CNIOS%2C%20Diploma
+                %2C%20Btech%2C%20Bsc!5e0!3m2!1sen!2sus!4v1766988578093!5m2!1sen!2sus"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 text-white footer-contact">
+        <h5 class="mb-3">Contact US</h5>
+        <p class="mb-1 small">growingleaf.ekm@gmail.com</p>
+        <p class="mb-1 small">+91-9446071741</p>
+        <p class="mb-0 small">+91-9446071741</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<section class="copyright-bar">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left -->
+            <div class="col-12 col-md-6 text-center text-md-start">
+                <p class="mb-0 small">
+                    Copyright © Growing Leaf
+                </p>
+            </div>
+
+            <!-- Right -->
+            <div class="col-12 col-md-6 text-center text-md-end powerd-by">
+                <p class="mb-0 small">
+                    Powered by —
+                    <a href="https://www.linkedin.com/in/sinovthomas/" target="_blank" rel="noopener" class="powered-link">
+                        SVT
+                    </a>
+                    —
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+</section>
 
 <!-- -----Bootstrap JS Bundle (with Popper)----- -->
 <script src="js/bootstrap.bundle.min.js"></script>
@@ -349,10 +674,5 @@
     //     });
     // });
 </script>
-
-    
-
- 
-
 </body>
 </html>
