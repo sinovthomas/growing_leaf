@@ -746,7 +746,7 @@ html {
   box-shadow: 0 8px 20px rgba(31, 42, 68, 0.35);
 }
 .tab-content {
-  min-height: 240px;
+  min-height: 500px;
 }
 
 .content-panel {
