@@ -172,10 +172,10 @@ html {
 /* Button */
 .btn-read {
     display: inline-block;
-    margin-top: clamp(10px, 2.5vw, 30px);
     background: #171e30;
     color: #fff;
     padding: 7px 20px;
+    margin-left: 7px;
     border-radius: 6px;
     text-decoration: none;
     font-size: 15px;
@@ -822,6 +822,9 @@ html {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
+.fee-circle a{
+    text-decoration: none;
+}
 /* ------------ Fee Section END------------------------*/
 
 
@@ -830,8 +833,8 @@ html {
 
 /* Wrapper for the floating form */
 .contact-float-wrap {
-  margin-top: -90px;     /* pulls up into Fee section */
-  margin-bottom: -90px;  /* pushes down into Footer */
+  margin-top: -90px;    
+  margin-bottom: -90px; 
   z-index: 3;
 }
 
@@ -933,6 +936,45 @@ html {
 .powerd-by a{
     color: #fff;
 }
+
+/* -----fee Page------ */
+.faq-section {
+  background: #f8f9fa;
+}
+
+.accordion-item {
+  border: 0;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.accordion-button {
+  border-radius: 16px;
+  padding: 18px 22px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ffffff;
+  color: #00b6b6;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  padding: 0 22px 20px;
+  text-align: justify;
+}
+
+.accordian-after-content{
+    padding-top: 10px;
+    text-align: justify;
+}
+/* -----fee Page END------ */
+
 
 
 
@@ -1142,7 +1184,6 @@ html {
         margin-top: 0px;
         color: #202c45;
     }
-
     /* ===============Top Contact Section END============ */
 
     /* ================Book Demo Button In Menu Bar================== */
@@ -1256,6 +1297,11 @@ html {
 
     .footer-contact{
         padding-left: 15px;
+    }
+    
+    /* fee Inner Page */
+    .faq-image{
+        display: none !important;
     }
 
 }
@@ -1376,6 +1422,11 @@ html {
         text-decoration: none;
         font-size: 12px;
     }
+
+    .btn-wrapper{
+        text-align: left;
+    }
+
     .image-wrapper-student {
         display: none !important;
     }
@@ -1441,6 +1492,12 @@ html {
     .footer-contact{
     padding-left: 15px;
     }
+
+    /* fee Inner Page */
+    .faq-image{
+        display: none !important;
+    }
+
 
 }
 /* =======================Large Phone END=============================
