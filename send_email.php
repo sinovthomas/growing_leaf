@@ -62,10 +62,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // growingleaf.in SMTP SETTINGS
         $mail->isSMTP();
-        $mail->Host = 'cp3.fra1.ultacp.com';
+        $mail->Host = 'cp233.fra21.ulta22cp.comHostName';
         $mail->SMTPAuth = true;
         $mail->Username = 'info@growingleaf.in';
-        $mail->Password = 'Nc52SO}#H$u}';
+        $mail->Password = 'Password';
         $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // $mail->Host       = 'smtp.gmail.com';
         // $mail->SMTPAuth   = true;
         // $mail->Username   = 'sinovthomas@gmail.com';
-        // $mail->Password   = 'bddz qwmb xoqe sjpa'; // REMOVE trailing space
+        // $mail->Password   = 'bddz qwmb App Pass Word'; // REMOVE trailing space
         // $mail->SMTPSecure = \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
         // $mail->Port       = 587;
 
